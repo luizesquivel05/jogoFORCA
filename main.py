@@ -30,3 +30,10 @@ try:
     os.system('cls')
 except:
     os.system('clear')
+    
+continuacao = "SIM"
+
+while continuacao:
+    palAleatoria = random.choice(listaPalavras) # escolhe uma palavra da lista de palavras
+    palDescrypt = list() # palavra descriptograda
+    palCrypt = list() # palavra criptograda
