@@ -16,3 +16,17 @@ try:
     os.system('cls')
 except:
     os.system('clear')
+    
+# LEITURA DA LISTA DE PALAVRAS:
+listaPalavras = list()
+i = 1
+while i <= qtd:
+    palavra = str(input(f"Digite a {i} º palavra:  ")).upper()
+    listaPalavras.append(palavra)
+    i += 1
+
+# LIMPA O CLI:
+try:
+    os.system('cls')
+except:
+    os.system('clear')
