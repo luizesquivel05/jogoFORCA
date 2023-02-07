@@ -1,3 +1,6 @@
+import random
+import os
+
 # LEITURA DA QUANIDADE DE VIDAS:
 vidas = int(input("Informe O numero de vidas: ")) 
 while vidas <= 0:
