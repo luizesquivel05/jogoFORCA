@@ -41,3 +41,8 @@ while continuacao:
     # pega palavra descriptografada:
     for i in palAleatoria:
         palDescrypt.append(i)
+        
+    # criptografia da palavra:
+    for i in range(0, len(palAleatoria)):
+        palCrypt.append("-")
+    print("".join(palCrypt))
