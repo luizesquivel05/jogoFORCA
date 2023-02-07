@@ -46,3 +46,25 @@ while continuacao:
     for i in range(0, len(palAleatoria)):
         palCrypt.append("-")
     print("".join(palCrypt))
+    
+    # faz as rodadas com base na quantidade de vidas:
+    acertou = False # para quando acertar a palavra.
+    vidasPERDIDAS = 0 # verifica quantas vidas foram perdidas
+    while acertou == False and vidasPERDIDAS < vidas:
+        letra = input("Digite uma letra: ").upper() # tentativa
+        
+        if letra in palDescrypt:
+            for i in range(0, len(palAleatoria)):
+                if letra == palDescrypt[i]:
+                    palCrypt[i] = letra # muda a letra na palavra criptografada
+        else:
+            vidasPERDIDAS += 1 # perde uma vida
+            print("Essa letra não existe na palavra.")
+        print("".join(palCrypt))
+    
+        acertou = True # tenta afirmar que a palavra está certa.
+        
+        # verificação se a afirmação acima está certa:
+        for i in range(0, len(palAleatoria)):
+            if palCrypt[i] == "-" :
+                acertou = False
