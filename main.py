@@ -68,3 +68,22 @@ while continuacao:
         for i in range(0, len(palAleatoria)):
             if palCrypt[i] == "-" :
                 acertou = False
+                
+    # finalização do jogo.
+    if palDescrypt == palCrypt:
+        print("Parabéns! você ganhou o jogo!")
+    else:
+        print("Infelizmente, você perdeu!")
+    listaPalavras.remove(palAleatoria) # remove a palavra atual da lista de palavras
+    if len(listaPalavras) >= 2:
+        if str(input("Deseja continuar o jogo? S para SIM e N para NAO: ")).upper() == "S":
+            # LIMPA O CLI:
+            try:
+                os.system('cls')
+            except:
+                os.system('clear')
+        else:
+            break
+    else:
+        break
+print("FIM DE JOGO! OBRIGADO POR JOGAR CONOSCO")
