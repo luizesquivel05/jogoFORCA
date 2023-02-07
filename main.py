@@ -10,3 +10,9 @@ while vidas <= 0:
 qtd = int(input("Digite a quantidade de palavras: "))
 while qtd <= 0:
     qtd = int(input("A quantidade de palavras deve ser maior ou igual a 1: "))
+
+# LIMPA O CLI:
+try:
+    os.system('cls')
+except:
+    os.system('clear')
