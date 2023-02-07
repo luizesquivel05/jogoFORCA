@@ -37,3 +37,7 @@ while continuacao:
     palAleatoria = random.choice(listaPalavras) # escolhe uma palavra da lista de palavras
     palDescrypt = list() # palavra descriptograda
     palCrypt = list() # palavra criptograda
+    
+    # pega palavra descriptografada:
+    for i in palAleatoria:
+        palDescrypt.append(i)
